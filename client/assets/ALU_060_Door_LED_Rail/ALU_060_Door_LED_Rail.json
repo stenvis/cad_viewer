@@ -1,0 +1,429 @@
+{
+  "sdk": "OCCT",
+  "sdkVersion": "2025.1",
+  "sdkHash": "fa45d59a",
+  "file": "/smru/data/ALU_060_Door_LED_Rail.STEP",
+  "originalUnitString": "INCH",
+  "unitScaleFactor": 25.399999999999999,
+  "aabbDx": 1092.2000002000004,
+  "aabbDy": 38.100000200000011,
+  "aabbDz": 19.050000200000085,
+  "parts": [
+    {
+      "id": "0:1:1:1",
+      "name": "ALU5052_060_Door_LED_Rail",
+      "numOccurrences": 1,
+      "bodies": [
+        {
+          "type": "SHEET_METAL_FOLDED",
+          "thickness": 1.6002000000000052,
+          "numCuttingContours": 38,
+          "totalFoldedCuttingLength": 4096.4887924644408,
+          "sheetArea": 139915.42628262789,
+          "thicknessArea": 6547.1568777634593,
+          "volume": 111946.32980690825,
+          "totalArea": 146462.58316039148,
+          "bboxDx": 1092.2,
+          "bboxDy": 38.100000000000009,
+          "bboxDz": 19.050000000000082,
+          "flatObbLength": 1092.2000000000003,
+          "flatObbWidth": 70.682620826491743,
+          "flatAabbLength": 1092.2000000000003,
+          "flatAabbWidth": 70.682620826491743,
+          "flatFilledArea": 69665.608845897194,
+          "flatOuterContourArea": 77164.944932268307,
+          "flatOuterContourLength": 2314.8634683535734,
+          "flatTotalContourLength": 4090.9267243137297,
+          "numEngravedSides": 0,
+          "drilledHoles": [
+            {
+              "diameter": 6.6040000000000001,
+              "count": 24,
+              "faceIds": [
+                [1],
+                [2],
+                [3],
+                [4],
+                [5],
+                [6],
+                [7],
+                [8],
+                [9],
+                [10],
+                [11],
+                [12],
+                [13],
+                [14],
+                [15],
+                [16],
+                [17],
+                [18],
+                [19],
+                [20],
+                [21],
+                [22],
+                [23],
+                [24]
+              ]
+            },
+            {
+              "diameter": 3.5,
+              "count": 1,
+              "faceIds": [[30]]
+            }
+          ],
+          "holeLocations": [
+            {
+              "faceIds": [1],
+              "location": [1078.02, 18.2499, 10.98],
+              "axis": [-0, -1, -0]
+            },
+            {
+              "faceIds": [2],
+              "location": [1078.02, -18.2499, 10.98],
+              "axis": [0, 1, 0]
+            },
+            {
+              "faceIds": [3],
+              "location": [682.812, 18.2499, 10.98],
+              "axis": [-0, -1, -0]
+            },
+            {
+              "faceIds": [4],
+              "location": [682.812, -18.2499, 10.98],
+              "axis": [0, 1, 0]
+            },
+            {
+              "faceIds": [5],
+              "location": [440.812, 18.2499, 10.98],
+              "axis": [-0, -1, -0]
+            },
+            {
+              "faceIds": [6],
+              "location": [440.812, -18.2499, 10.98],
+              "axis": [0, 1, 0]
+            },
+            {
+              "faceIds": [7],
+              "location": [198.812, 18.2499, 10.98],
+              "axis": [-0, -1, -0]
+            },
+            {
+              "faceIds": [8],
+              "location": [198.812, -18.2499, 10.98],
+              "axis": [0, 1, 0]
+            },
+            {
+              "faceIds": [9],
+              "location": [924.812, 18.2499, 10.98],
+              "axis": [-0, -1, -0]
+            },
+            {
+              "faceIds": [10],
+              "location": [924.812, -18.2499, 10.98],
+              "axis": [0, 1, 0]
+            },
+            {
+              "faceIds": [11],
+              "location": [861.312, 18.2499, 10.98],
+              "axis": [-0, -1, -0]
+            },
+            {
+              "faceIds": [12],
+              "location": [861.312, -18.2499, 10.98],
+              "axis": [0, 1, 0]
+            },
+            {
+              "faceIds": [13],
+              "location": [619.312, 18.2499, 10.98],
+              "axis": [-0, -1, -0]
+            },
+            {
+              "faceIds": [14],
+              "location": [619.312, -18.2499, 10.98],
+              "axis": [0, 1, 0]
+            },
+            {
+              "faceIds": [15],
+              "location": [377.312, 18.2499, 10.98],
+              "axis": [-0, -1, -0]
+            },
+            {
+              "faceIds": [16],
+              "location": [377.312, -18.2499, 10.98],
+              "axis": [0, 1, 0]
+            },
+            {
+              "faceIds": [17],
+              "location": [135.312, 18.2499, 10.98],
+              "axis": [-0, -1, -0]
+            },
+            {
+              "faceIds": [18],
+              "location": [135.312, -18.2499, 10.98],
+              "axis": [0, 1, 0]
+            },
+            {
+              "faceIds": [19],
+              "location": [800.64, 18.2499, 10.98],
+              "axis": [-0, -1, -0]
+            },
+            {
+              "faceIds": [20],
+              "location": [800.64, -18.2499, 10.98],
+              "axis": [0, 1, 0]
+            },
+            {
+              "faceIds": [21],
+              "location": [558.64, 18.2499, 10.98],
+              "axis": [-0, -1, -0]
+            },
+            {
+              "faceIds": [22],
+              "location": [558.64, -18.2499, 10.98],
+              "axis": [0, 1, 0]
+            },
+            {
+              "faceIds": [23],
+              "location": [316.64, -18.2499, 10.98],
+              "axis": [0, 1, 0]
+            },
+            {
+              "faceIds": [24],
+              "location": [316.64, 18.2499, 10.98],
+              "axis": [-0, -1, -0]
+            },
+            {
+              "faceIds": [30],
+              "location": [1016, 0, 0.8001],
+              "axis": [-0, -0, 1]
+            }
+          ],
+          "cutouts": [
+            {
+              "totalCuttingLength": 497.92986922336786,
+              "count": 24,
+              "type": "RoundHole",
+              "cutInThickness": false,
+              "cutInBend": false,
+              "isCrossEdges": false,
+              "diameter": 6.6039999999998322,
+              "area": 34.253425586990851,
+              "faceIds": [
+                [1],
+                [2],
+                [3],
+                [4],
+                [5],
+                [6],
+                [7],
+                [8],
+                [9],
+                [10],
+                [11],
+                [12],
+                [13],
+                [14],
+                [15],
+                [16],
+                [17],
+                [18],
+                [19],
+                [20],
+                [21],
+                [22],
+                [23],
+                [24]
+              ]
+            },
+            {
+              "totalCuttingLength": 139.16990564677579,
+              "maxCuttingAngle": 90,
+              "cuttingDepth": 1.6002000000000052,
+              "count": 7,
+              "type": "SlotHole",
+              "cutInThickness": false,
+              "cutInBend": false,
+              "isCrossEdges": false,
+              "sideA": 8.0000000019932962,
+              "sideB": 3.4000000579932355,
+              "area": 24.71920315496839,
+              "faceIds": [
+                [25, 89, 90, 91],
+                [26, 86, 87, 88],
+                [27, 83, 84, 85],
+                [28, 80, 81, 82],
+                [29, 77, 78, 79],
+                [31, 74, 75, 76],
+                [32, 71, 72, 73]
+              ]
+            },
+            {
+              "totalCuttingLength": 10.995574287564276,
+              "count": 1,
+              "type": "RoundHole",
+              "cutInThickness": false,
+              "cutInBend": false,
+              "isCrossEdges": false,
+              "diameter": 3.5000000000002807,
+              "area": 9.6211275016187408,
+              "faceIds": [[30]]
+            },
+            {
+              "totalCuttingLength": 1073.9929068023621,
+              "maxCuttingAngle": 90,
+              "cuttingDepth": 1.6002000000000052,
+              "count": 4,
+              "type": "SlotHole",
+              "cutInThickness": false,
+              "cutInBend": false,
+              "isCrossEdges": false,
+              "sideA": 126.99999999999909,
+              "sideB": 12.699999999999934,
+              "area": 1578.2868697743827,
+              "faceIds": [
+                [33, 58, 59, 60],
+                [34, 55, 56, 57],
+                [35, 48, 49, 50],
+                [36, 45, 46, 47]
+              ]
+            },
+            {
+              "totalCuttingLength": 53.975000000000009,
+              "maxCuttingAngle": 90,
+              "cuttingDepth": 1.6002000000000052,
+              "count": 1,
+              "type": "RectHole",
+              "cutInThickness": false,
+              "cutInBend": false,
+              "isCrossEdges": false,
+              "sideA": 14.287500000000001,
+              "sideB": 12.700000000000003,
+              "area": 181.4512500000001,
+              "faceIds": [[51, 52, 53, 54]]
+            }
+          ],
+          "engravings": [],
+          "minCutoutShorterSide": 3.4000000599966107,
+          "minCutoutLongerSide": 8.0000000039932928,
+          "thicknessFaces": [
+            {
+              "faceId": 37,
+              "cuttingLength": 60.763654901848184
+            },
+            {
+              "faceId": 39,
+              "cuttingLength": 60.763654901848192
+            },
+            {
+              "faceId": 41,
+              "cuttingLength": 9.9745566751477135
+            },
+            {
+              "faceId": 42,
+              "cuttingLength": 1079.4999999999998
+            },
+            {
+              "faceId": 43,
+              "cuttingLength": 9.9745566751476762
+            },
+            {
+              "faceId": 66,
+              "cuttingLength": 9.9745566751477135
+            },
+            {
+              "faceId": 67,
+              "cuttingLength": 1079.4999999999998
+            },
+            {
+              "faceId": 68,
+              "cuttingLength": 9.9745566751476655
+            }
+          ],
+          "refFaceId": 38,
+          "bends": [
+            {
+              "angle": 90,
+              "innerRadius": 1.5875000000000004,
+              "ids": [62, 63],
+              "direction": "Down",
+              "kFactor": 0.44679999999999997,
+              "netLength": 1092.2,
+              "grossLength": 1092.2,
+              "flatPatternFaceIds": [4],
+              "bendLineIds": [1],
+              "parallelBendIds": [2],
+              "distancesToParallelBends": [35.341310413245793],
+              "flangeDimensionPoint": [546.1, 35.3413, 0],
+              "isLeaf": true,
+              "clearances": [
+                {
+                  "flangeId": 38,
+                  "bendId": 63,
+                  "closestCutOut": 8.7185499989999968,
+                  "closestCutting": null,
+                  "closestParallel": 8.7185499999999934,
+                  "maximumFlangeLength": 31.724600000999988,
+                  "closestPoint": 8.7185499989999968,
+                  "hasSupportEdge": true
+                },
+                {
+                  "flangeId": 44,
+                  "bendId": 63,
+                  "closestCutOut": 4.4902881989999628,
+                  "closestCutting": null,
+                  "closestParallel": 15.862300000000005,
+                  "maximumFlangeLength": 15.862300001000136,
+                  "closestPoint": 4.4902881989999628,
+                  "hasSupportEdge": true
+                }
+              ]
+            },
+            {
+              "angle": 90,
+              "innerRadius": 1.5874999999999999,
+              "ids": [64, 65],
+              "direction": "Down",
+              "kFactor": 0.44679999999999997,
+              "netLength": 1092.2,
+              "grossLength": 1092.2,
+              "flatPatternFaceIds": [5],
+              "bendLineIds": [2],
+              "parallelBendIds": [1],
+              "distancesToParallelBends": [35.341310413245793],
+              "flangeDimensionPoint": [546.1, -35.3413, 0],
+              "isLeaf": true,
+              "clearances": [
+                {
+                  "flangeId": 38,
+                  "bendId": 65,
+                  "closestCutOut": 8.7185499989999968,
+                  "closestCutting": null,
+                  "closestParallel": 8.7185499999999969,
+                  "maximumFlangeLength": 31.724600000999988,
+                  "closestPoint": 8.7185499989999968,
+                  "hasSupportEdge": true
+                },
+                {
+                  "flangeId": 70,
+                  "bendId": 65,
+                  "closestCutOut": 4.4902881989999592,
+                  "closestCutting": null,
+                  "closestParallel": 15.862299999999991,
+                  "maximumFlangeLength": 15.862300001000133,
+                  "closestPoint": 4.4902881989999592,
+                  "hasSupportEdge": true
+                }
+              ]
+            }
+          ],
+          "profile": null,
+          "extras": {
+            "contourSummary": {},
+            "isRolling": false
+          }
+        }
+      ]
+    }
+  ]
+}

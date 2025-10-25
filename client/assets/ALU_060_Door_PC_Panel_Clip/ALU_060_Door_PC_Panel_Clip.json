@@ -1,0 +1,225 @@
+{
+  "sdk": "OCCT",
+  "sdkVersion": "2025.1",
+  "sdkHash": "fa45d59a",
+  "file": "/smru/data/ALU_060_Door_PC_Panel_Clip.STEP",
+  "originalUnitString": "INCH",
+  "unitScaleFactor": 25.399999999999999,
+  "aabbDx": 43.662370841390171,
+  "aabbDy": 8.7101270538174482,
+  "aabbDz": 25.400000200000012,
+  "parts": [
+    {
+      "id": "0:1:1:1",
+      "name": "ALU5052_060_Door_PC_Panel_Clip",
+      "numOccurrences": 1,
+      "bodies": [
+        {
+          "type": "SHEET_METAL_FOLDED",
+          "thickness": 1.5163799999999998,
+          "numCuttingContours": 2,
+          "totalFoldedCuttingLength": 170.98609135051254,
+          "sheetArea": 2508.0780457693481,
+          "thicknessArea": 257.47393814293025,
+          "volume": 1901.600664288919,
+          "totalArea": 2765.551983912278,
+          "bboxDx": 43.662370641390162,
+          "bboxDy": 8.7101268538174477,
+          "bboxDz": 25.400000000000006,
+          "flatObbLength": 50.824636536324164,
+          "flatObbWidth": 25.400000000000009,
+          "flatAabbLength": 50.824636536324164,
+          "flatAabbWidth": 25.400000000000009,
+          "flatFilledArea": 1243.8079754597418,
+          "flatOuterContourArea": 1282.2923844161792,
+          "flatOuterContourLength": 146.9983864229435,
+          "flatTotalContourLength": 168.98953499807203,
+          "numEngravedSides": 0,
+          "drilledHoles": [
+            {
+              "diameter": 7,
+              "count": 1,
+              "faceIds": [[1]]
+            }
+          ],
+          "holeLocations": [
+            {
+              "faceIds": [1],
+              "location": [11.9062, -0.75819, 12.7],
+              "axis": [0, 1, 0]
+            }
+          ],
+          "cutouts": [
+            {
+              "totalCuttingLength": 21.991148575128552,
+              "count": 1,
+              "type": "RoundHole",
+              "cutInThickness": false,
+              "cutInBend": false,
+              "isCrossEdges": false,
+              "diameter": 6.9999999999999982,
+              "area": 38.484510006474963,
+              "faceIds": [[1]]
+            }
+          ],
+          "engravings": [],
+          "minCutoutShorterSide": null,
+          "minCutoutLongerSide": null,
+          "thicknessFaces": [
+            {
+              "faceId": 3,
+              "cuttingLength": 45.472914712544416
+            },
+            {
+              "faceId": 4,
+              "cuttingLength": 4.9872783375737795
+            },
+            {
+              "faceId": 5,
+              "cuttingLength": 19.050000000000001
+            },
+            {
+              "faceId": 6,
+              "cuttingLength": 4.9872783375737937
+            },
+            {
+              "faceId": 8,
+              "cuttingLength": 45.472914712544409
+            },
+            {
+              "faceId": 14,
+              "cuttingLength": 4.9872783375737963
+            },
+            {
+              "faceId": 15,
+              "cuttingLength": 19.050000000000001
+            },
+            {
+              "faceId": 16,
+              "cuttingLength": 4.9872783375737981
+            }
+          ],
+          "refFaceId": 17,
+          "bends": [
+            {
+              "angle": 90,
+              "innerRadius": 1.5874999999999986,
+              "ids": [18, 19],
+              "direction": "Down",
+              "kFactor": 0.44679999999999997,
+              "netLength": 25.399999999999999,
+              "grossLength": 25.399999999999999,
+              "flatPatternFaceIds": [5],
+              "bendLineIds": [1],
+              "parallelBendIds": [2],
+              "distancesToParallelBends": [6.6639158084157799],
+              "flangeDimensionPoint": [-1e-7, -1.51638, 12.7],
+              "isLeaf": true,
+              "clearances": [
+                {
+                  "flangeId": 12,
+                  "bendId": 18,
+                  "closestCutOut": null,
+                  "closestCutting": null,
+                  "closestParallel": 2.5023668538174491,
+                  "maximumFlangeLength": 2.5023668548174491,
+                  "closestPoint": 2.5023668538174491,
+                  "hasSupportEdge": true
+                },
+                {
+                  "flangeId": 17,
+                  "bendId": 18,
+                  "closestCutOut": 8.4062499989999999,
+                  "closestCutting": null,
+                  "closestParallel": 23.8125,
+                  "maximumFlangeLength": 23.812500001,
+                  "closestPoint": 8.4062499989999999,
+                  "hasSupportEdge": true
+                }
+              ]
+            },
+            {
+              "angle": 120.5406048496815,
+              "innerRadius": 1.5874999999999986,
+              "ids": [20, 21],
+              "direction": "Up",
+              "kFactor": 0.44679999999999997,
+              "netLength": 25.400000000000006,
+              "grossLength": 25.400000000000006,
+              "flatPatternFaceIds": [6],
+              "bendLineIds": [2],
+              "parallelBendIds": [1, 3],
+              "distancesToParallelBends": [11.956216329327567, 6.6639158084157799],
+              "flangeDimensionPoint": null,
+              "isLeaf": false,
+              "clearances": [
+                {
+                  "flangeId": 11,
+                  "bendId": 21,
+                  "closestCutOut": null,
+                  "closestCutting": null,
+                  "closestParallel": 8.0804720099676182,
+                  "maximumFlangeLength": 8.0804720109676182,
+                  "closestPoint": 8.0804720099676182,
+                  "hasSupportEdge": true
+                },
+                {
+                  "flangeId": 12,
+                  "bendId": 21,
+                  "closestCutOut": null,
+                  "closestCutting": null,
+                  "closestParallel": 2.5023668538174446,
+                  "maximumFlangeLength": 2.5023668548174465,
+                  "closestPoint": 2.5023668538174446,
+                  "hasSupportEdge": true
+                }
+              ]
+            },
+            {
+              "angle": 75.540604849681614,
+              "innerRadius": 1.5875000000000055,
+              "ids": [22, 23],
+              "direction": "Down",
+              "kFactor": 0.44679999999999997,
+              "netLength": 25.399999999999999,
+              "grossLength": 25.399999999999999,
+              "flatPatternFaceIds": [7],
+              "bendLineIds": [3],
+              "parallelBendIds": [2],
+              "distancesToParallelBends": [11.956216329327567],
+              "flangeDimensionPoint": [50.8246, -1.51638, 12.7],
+              "isLeaf": true,
+              "clearances": [
+                {
+                  "flangeId": 7,
+                  "bendId": 22,
+                  "closestCutOut": null,
+                  "closestCutting": null,
+                  "closestParallel": 5.1199261619498158,
+                  "maximumFlangeLength": 5.1199261629498336,
+                  "closestPoint": 5.1199261619498158,
+                  "hasSupportEdge": true
+                },
+                {
+                  "flangeId": 11,
+                  "bendId": 22,
+                  "closestCutOut": null,
+                  "closestCutting": null,
+                  "closestParallel": 8.0804720099675773,
+                  "maximumFlangeLength": 8.080472010967588,
+                  "closestPoint": 8.0804720099675773,
+                  "hasSupportEdge": true
+                }
+              ]
+            }
+          ],
+          "profile": null,
+          "extras": {
+            "contourSummary": {},
+            "isRolling": false
+          }
+        }
+      ]
+    }
+  ]
+}

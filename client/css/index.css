@@ -1,0 +1,8 @@
+@import url('./settings/var.css');
+@import url('./settings/reset.css');
+@import url('./settings/preload.css');
+
+.text {
+   font-family: monospace;
+   text-align: center;
+}
