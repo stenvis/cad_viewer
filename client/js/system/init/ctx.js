@@ -4,7 +4,7 @@ import BLMonitor from '/js/lib/helpers/monitor.js';
 import device from '/js/system/init/device.js';
 import boot from '/js/preload/boot/index.js';
 
-const collections = ['models'];
+const collections = ['models', 'textures'];
 
 const dataset = new Dataset(collections);
 

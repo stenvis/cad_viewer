@@ -4,6 +4,7 @@ import SYSTEM_PRESETS from "/js/system/presets.js";
 import OrbitalCamera from "/js/lib/3D/camera/camera.js";
 import AnimationPool from "/js/lib/3D/pool/pool.js";
 import Workspace from "/js/core/workspace/workspace.js";
+import Gizmo from "/js/lib/3D/gizmo/gizmo.js";
 
 const {
    CTX_PRESETS,
@@ -33,6 +34,7 @@ const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerH
 const orbital = new OrbitalCamera(camera);
 const workspace = new Workspace();
 const pool = new AnimationPool();
+const gizmo = new Gizmo(renderer, camera);
 
 // const ambientLight = new THREE.AmbientLight(0xffffff, 1.);
 // scene.add(ambientLight);
@@ -49,6 +51,7 @@ const system = {
    orbital,
    workspace,
    pool,
+   gizmo,
 };
 
 window.THREEViewer.add({

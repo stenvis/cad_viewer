@@ -10,6 +10,7 @@ function runtime() {
    preload_progress.classList.add('hidden');
    setTimeout(() => { preload_progress.remove(); }, 450);
    THREEViewer.system.workspace.setViewMode();
+   THREEViewer.system.gizmo.init();
    render.start();
    UI.register();
 }

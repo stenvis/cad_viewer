@@ -1,15 +1,17 @@
 import loadModels from './loaders/models.js'
+import loadTextures from './loaders/textures.js'
 import models from './onload/models.js';
+import textures from './onload/textures.js';
 
 let simple_stage_executed = false;
 
 
 function getOnloadCount() {
-   return loadModels.getOnloadCount();
+   return loadModels.getOnloadCount() + loadTextures.getOnloadCount();
 }
 
 function getLoadedCount() {
-   return loadModels.getReadyCount();
+   return loadModels.getReadyCount() + loadTextures.getReadyCount();
 }
 
 function checkLoadStatus() {
@@ -24,6 +26,7 @@ function checkLoadStatus() {
 
 function basicLoader() {
    loadModels.start(models, checkLoadStatus);
+   loadTextures.start(textures, checkLoadStatus);
 }
 
 export default basicLoader;

@@ -15,7 +15,7 @@ class Mode3D {
 
             // const material = new THREE.MeshStandardMaterial({ color });
             const material = new THREE.MeshBasicMaterial({ color });
-            console.log(material);
+            // console.log(material);
             child.material = material;
          }
       });

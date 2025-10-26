@@ -2,6 +2,8 @@ class Resize {
    #renderer;
    #canvas;
    #camera;
+   #width;
+   #height;
 
    constructor({ renderer, camera }, canvas) {
       this.#renderer = renderer;
@@ -10,11 +12,20 @@ class Resize {
    }
 
    check() {
-      const width = this.#canvas.clientWidth, height = this.#canvas.clientHeight, aspect = width / height;
-      this.#camera.aspect = aspect;
+      const width = this.#width = this.#canvas.clientWidth;
+      const height = this.#height = this.#canvas.clientHeight;
+      this.#camera.aspect = width / height;
       this.#camera.updateProjectionMatrix();
       this.#renderer.setSize(width, height, false);
       this.#renderer.setPixelRatio(window.devicePixelRatio);
+   }
+
+   get width() {
+      return this.#width;
+   }
+
+   get height() {
+      return this.#height;
    }
 };
  
