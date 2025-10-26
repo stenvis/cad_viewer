@@ -39,7 +39,7 @@ class OrbitalCamera {
       this.#extensions['centroid'] = new Centroid(camera, this.#state); 
 
       this.#zoom = new Zoom(camera, this.#state);
-      this.#state.distance = camera.position.distanceTo(this.#state.origin);
+      // this.#state.distance = camera.position.distanceTo(this.#state.origin);
 
       this.setMode('orbital');
    }
@@ -63,9 +63,17 @@ class OrbitalCamera {
 		this.move();
 	}
 
+   rotateOrbital(x, y, dist, speed) {
+      this.#extensions.orbital.rotate(x, y, dist, speed);
+   }
+
    updateCentroid(pos) {
       this.#state.origin.copy(pos);
       this.#extensions.centroid.move();
+   }
+
+   updateZoom(len) {
+      this.#zoom.update(len);
    }
 
    move() { this.#mode.move(); }

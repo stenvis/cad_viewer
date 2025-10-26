@@ -1,6 +1,7 @@
 @import url('./settings/var.css');
 @import url('./settings/reset.css');
 @import url('./settings/preload.css');
+@import url('./workspace/index.css');
 
 .text {
    font-family: monospace;

@@ -13,14 +13,19 @@ const
    preload_line = GEBI('preload-line'),
    preload_value = GEBI('preload-value'),
 
-   upload_image = GEBI('upload-image');
+   input_glb = GEBI('input-glb'),
+   upload_glb = GEBI('upload-glb'),
+   reset_view = GEBI('reset-view');
 
 const DOM = {
    canvas,
    preload_progress,
    preload_line,
    preload_value,
-   upload_image,
+
+   input_glb,
+   upload_glb,
+   reset_view,
 };
 
 export default DOM;

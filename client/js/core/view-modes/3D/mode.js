@@ -1,13 +1,28 @@
+const {
+   max,
+} = Math;
+
+const box3 = new THREE.Box3();
+const vec3 = new THREE.Vector3();
+
 class Mode3D {
-   constructor() {
-   }
+   #active_mesh;
 
    update() {
-      const { models } = THREEViewer.dataset;
+      const { emitters, dataset } = THREEViewer;
 
-      const mesh = models.getObject('test').scene;
+      const model = dataset.models.getObject('test');
 
-      mesh.scale.setScalar(0.001);
+      this.setModel(model);
+
+      emitters.loader.on('gltf_parsed', this.setModel);
+   }
+
+   setModel = (model) => {
+      if (this.#active_mesh) this.#active_mesh.removeFromParent();
+
+      const { system } = THREEViewer;
+      const mesh = model.scene;
 
       mesh.traverse(child => {
          if (child.isMesh) {
@@ -15,12 +30,25 @@ class Mode3D {
 
             // const material = new THREE.MeshStandardMaterial({ color });
             const material = new THREE.MeshBasicMaterial({ color });
-            // console.log(material);
             child.material = material;
          }
       });
 
-      THREEViewer.system.scene.add(mesh);
+
+      const box = box3.setFromObject(mesh);
+      box.getCenter(vec3);
+      mesh.position.sub(vec3);
+      box.getSize(vec3);
+
+      const max_length = max(vec3.x, vec3.y, vec3.z) * 2;
+
+      system.orbital.updateZoom(max_length);
+
+      system.scene.add(mesh);
+
+      this.#active_mesh = mesh;
+
+      window.render.update();
    }
 }
 

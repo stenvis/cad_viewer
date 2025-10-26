@@ -1,4 +1,7 @@
 import easing from "/js/lib/helpers/math/easing.js";
+import Elapsed from "/js/lib/helpers/math/elapsed.js";
+
+const elapsed = new Elapsed();
 
 const {
    sqrt, abs,
@@ -10,6 +13,7 @@ const {
 
 const {
    lerp,
+   easeInOutCubic,
 } = easing;
 
 const
@@ -29,6 +33,13 @@ class Orbtial {
    #camera;
    #state;
    #damping_factor = 0.1;
+   #rotation_speed = 1;
+   #src_distance = 1;
+   #dst_distance = 1;
+   #src_origin = new THREE.Vector3();
+   #dst_origin = new THREE.Vector3();
+   #temp_euler = new THREE.Euler(0, 0, 0, 'YXZ');
+   #is_active_reset = false;
 
    constructor(camera, state) {
       this.#camera = camera;
@@ -37,15 +48,44 @@ class Orbtial {
 
    enable() {}
 
-   rotate(position) {
-      const { dst_euler, vec3, origin } = this.#state;
-      vec3.copy(position).sub(origin);
-      dst_euler.x = atan2(-vec3.x, vec3.z);
-      dst_euler.y = atan2(vec3.y, sqrt(vec3.x ** 2 + vec3.z ** 2));
+   rotate(azimuth, polar, dst_distance, speed) {
+      const { src_euler, dst_euler, distance, origin } = this.#state;
+      dst_euler.x = -azimuth * RAD;
+      dst_euler.y = polar * RAD;
+      this.#temp_euler.copy(src_euler);
+      this.#rotation_speed = speed || this.#rotation_speed;
+      this.#src_distance = distance;
+      this.#dst_distance = dst_distance || distance;
+      this.#src_origin.copy(origin);
 
-      this.#damping_factor = DAMPING_FACTOR_SHOW; 
+      this.#is_active_reset = true;
+      elapsed.stamp();
+      THREEViewer.system.pool.rewriteTarget(this.#camera.uuid, this.interpolate);
+   }
 
-      THREEViewer.system.pool.addTarget(this.#camera.uuid, this.damping);
+   interpolate = () => {
+      const { src_euler, dst_euler, vec3 } = this.#state;
+
+      const progress = easeInOutCubic(min((elapsed.time() / 1000) * this.#rotation_speed, 1));
+      const camera = this.#camera, 
+         x = src_euler.x = lerp(this.#temp_euler.x, dst_euler.x, progress),
+		   y = src_euler.y = lerp(this.#temp_euler.y, dst_euler.y, progress),
+         d = this.#state.distance = lerp(this.#src_distance, this.#dst_distance, progress),
+         o = this.#state.origin.lerpVectors(this.#src_origin, this.#dst_origin, progress);
+
+      vec3.x = -sin(x) * cos(y); vec3.y = sin(y); vec3.z = cos(x) * cos(y);
+      vec3.multiplyScalar(d);
+      vec3.add(o);
+
+      camera.position.copy(vec3);
+      camera.lookAt(o);
+
+		THREEViewer.emitters.camera.emit('orbital_damping', vec3, o);
+
+      if (progress === 1) {
+         this.#is_active_reset = false;
+         this.clear();
+      }
    }
 
    defineAngles() {

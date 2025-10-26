@@ -22,16 +22,27 @@ class Zoom {
    #state;
    #vec3 = new THREE.Vector3();
    #target_distance;
+   #min_dist = MIN_DIST;
+   #max_dist = MAX_DIST;
 
    constructor(camera, state) {
       this.#camera = camera;
       this.#state = state;
    }
 
+   update(len) {
+      const tolerance = len / 2;
+      this.#state.distance = len;
+      this.#target_distance = len;
+      this.#min_dist = len - tolerance;
+      this.#max_dist = len + tolerance;
+      this.damping();
+   }
+
    change(n) {
       n = max(-80, min(80, n));
       const { distance } = this.#state;
-      this.#target_distance = max(MIN_DIST, min(MAX_DIST, distance + (n * ZOOM_SPEED * distance)));
+      this.#target_distance = max(this.#min_dist, min(this.#max_dist, distance + (n * ZOOM_SPEED * distance)));
 
 		THREEViewer.system.pool.addTarget(this.#camera.uuid + 'zoom', this.damping);
    }

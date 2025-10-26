@@ -1,0 +1,23 @@
+.dev-tools-container {
+   position: absolute;
+   left: 1rem;
+   top:  1rem;
+
+   z-index: 10;
+}
+
+.dev-btn {
+   margin: 1rem 0; 
+
+   border: 2px solid rgb(240, 240, 240, .8);
+   color: white;
+   font-family: monospace;
+   padding: 1rem 2rem;
+   border-radius: 0.4rem;
+
+   cursor: pointer;
+}
+
+.dev-btn:active {
+   background-color: rgb(240, 240, 240, .3);
+}

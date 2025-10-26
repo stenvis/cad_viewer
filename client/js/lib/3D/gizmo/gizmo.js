@@ -1,4 +1,4 @@
-const SIZE = (window.innerWidth / 10) * 0.8;
+const SIZE = (window.innerHeight / 5) * 0.8;
 
 class Gizmo {
    #renderer;

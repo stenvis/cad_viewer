@@ -31,6 +31,13 @@ class GLTFLoader {
       this.#counter += 1;
    }
 
+   parse(arrayBuffer) {
+      this.#gltf.parse(arrayBuffer, '',
+         gltf => {
+            THREEViewer.emitters.loader.emit('gltf_parsed', gltf);
+         });
+   }
+
    get getLoadedCount() {
       return this.#counter;
    }

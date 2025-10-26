@@ -11,6 +11,7 @@ const dataset = new Dataset(collections);
 const emitters = {
    'preloading': new EventEmitter(),
    'camera': new EventEmitter(),
+   'loader': new EventEmitter(),
 };
 
 const monitors = {
