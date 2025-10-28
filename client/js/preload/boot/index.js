@@ -1,5 +1,5 @@
 import DOM from "/js/storage/dom.js";
-import runtime from "./runtime.js";
+import launch from "./launch.js";
 
 const {
    preload_line,
@@ -13,7 +13,7 @@ function updateProgressStatus(width) {
 }
 
 function init() {
-   THREEViewer.emitters.preloading.on('preloading_done', runtime);
+   THREEViewer.emitters.preloading.on('preloading_done', launch);
 }
 
 

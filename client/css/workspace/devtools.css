@@ -16,8 +16,27 @@
    border-radius: 0.4rem;
 
    cursor: pointer;
+
+   transition: .24s ease-in-out background-color;
+}
+
+.dev-btn:hover {
+   background-color: rgb(240, 240, 240, .2);
 }
 
 .dev-btn:active {
-   background-color: rgb(240, 240, 240, .3);
+   background-color: rgb(240, 240, 240, .5);
+}
+
+
+.modes-container {
+   display: flex;
+   width: 20rem;
+   justify-content: space-around;
+   position: absolute;
+   bottom: 1rem;
+   left: 50%;
+   transform: translateX(-50%);
+
+   z-index: 10;
 }

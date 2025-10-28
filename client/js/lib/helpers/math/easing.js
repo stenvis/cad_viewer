@@ -21,7 +21,7 @@ function lerp(pS, pE, diff) {
 }
 
 function easeInSine(x) {
-  return 1 - Math.cos((x * Math.PI) / 2);
+  return 1 - cos((x * PI) / 2);
 }
 
 function easeInOutSine(x) {

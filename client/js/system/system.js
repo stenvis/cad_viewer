@@ -30,7 +30,6 @@ pmrem_generator(renderer);
 scene.background = new THREE.Color(canvas_bg_color);
 
 const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 10000);
-
 const orbital = new OrbitalCamera(camera);
 const workspace = new Workspace();
 const pool = new AnimationPool();

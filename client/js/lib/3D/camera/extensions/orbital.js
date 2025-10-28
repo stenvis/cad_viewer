@@ -103,7 +103,7 @@ class Orbtial {
       dst_euler.y += dirY * ROTATION_SPEED * RAD;
       dst_euler.y = max(MIN_POLAR_ANGLE, min(MAX_POLAR_ANGLE, dst_euler.y));
 
-		THREEViewer.system.pool.addTarget(this.#camera.uuid, this.damping);
+		THREEViewer.system.pool.rewriteTarget(this.#camera.uuid, this.damping);
    }
 
    damping = () => {
@@ -137,6 +137,7 @@ class Orbtial {
    pointerDown() {
       this.defineAngles();
       this.#damping_factor = DAMPING_FACTOR_INNER;
+      this.clear();
    }
 
    clear() {

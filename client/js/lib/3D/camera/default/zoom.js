@@ -44,7 +44,7 @@ class Zoom {
       const { distance } = this.#state;
       this.#target_distance = max(this.#min_dist, min(this.#max_dist, distance + (n * ZOOM_SPEED * distance)));
 
-		THREEViewer.system.pool.addTarget(this.#camera.uuid + 'zoom', this.damping);
+		THREEViewer.system.pool.rewriteTarget(this.#camera.uuid, this.damping);
    }
 
    damping = () => {
@@ -66,7 +66,7 @@ class Zoom {
    }
 
    clear() {
-		THREEViewer.system.pool.removeTarget(this.#camera.uuid + 'zoom');
+		THREEViewer.system.pool.removeTarget(this.#camera.uuid);
    }
 
    zoomThreshold() {
