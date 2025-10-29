@@ -2,14 +2,19 @@ import DOM from "/js/storage/dom.js";
 import launch from "./launch.js";
 
 const {
+   min,
+} = Math;
+
+const {
    preload_line,
    preload_value,
 } = DOM;
 
 
 function updateProgressStatus(width) {
-   preload_line.style.width = width + '%';
-   preload_value.textContent = width + '%';
+   const w = min(width, 100);
+   preload_line.style.width = w + '%';
+   preload_value.textContent = w + '%';
 }
 
 function init() {
